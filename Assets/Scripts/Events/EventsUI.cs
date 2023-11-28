@@ -26,12 +26,15 @@ public class EventsUI : MonoBehaviour
         distanceText.text = distance.ToString("F2");
     }
 
+
+    //Subscripción de las funciones a los Eventos
     public void OnEnable()
     {
         EventsGameManager.OnEnterKeyPressed += UpdateText;
         EventsGameManager.OnEscapeKeyPressed += InitializeText;
     }
 
+    //DesSubscripción de las funciones a los Eventos
     public void OnDisable()
     {
        EventsGameManager.OnEnterKeyPressed -= UpdateText;

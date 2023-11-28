@@ -67,13 +67,14 @@ public class EventsEnemy : MonoBehaviour
         canMove = true;
     }
 
-
+    //Subscripción de las funciones a los Eventos
     public void OnEnable()
     {
         EventsGameManager.OnEnterKeyPressed += StopMovement;
         EventsGameManager.OnEscapeKeyPressed += RestartMovement;
     }
 
+    //DesSubscripción de las funciones a los Eventos
     public void OnDisable()
     {
         EventsGameManager.OnEnterKeyPressed -= StopMovement;

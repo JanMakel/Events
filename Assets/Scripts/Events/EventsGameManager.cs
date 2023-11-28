@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class EventsGameManager : MonoBehaviour
 {
+    //Delegados 
     public delegate void Escape();
     public delegate void Enter();
 
-
+    //Eventos
     public static event Escape OnEscapeKeyPressed;
     public static event Enter OnEnterKeyPressed;
 
+
+    //Evento que se ejecutará cuando pulsemos Escape
     public void PressEscape()
     {
         if (Input.GetKeyDown("escape"))
@@ -24,6 +27,7 @@ public class EventsGameManager : MonoBehaviour
 
     }
 
+    //Evento que se ejecutará cuando pulsemos Enter
     public void PressEnter()
     {
         if (Input.GetKeyDown("return"))
@@ -36,7 +40,7 @@ public class EventsGameManager : MonoBehaviour
         }
     }
 
-
+    //Llamada a las funciones 
     private void Update()
     {
         PressEnter();

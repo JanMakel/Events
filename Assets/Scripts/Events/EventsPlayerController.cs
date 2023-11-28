@@ -48,12 +48,13 @@ public class EventsPlayerController : MonoBehaviour
     }
 
 
+    //Subscripción de las funciones a los Eventos
     public void OnEnable()
     {
         EventsGameManager.OnEnterKeyPressed += ChangeColorToGreen;
         EventsGameManager.OnEscapeKeyPressed += ChangeColorToOriginal;
     }
-
+    //DesSubscripción de las funciones a los Eventos
     public void OnDisable()
     {
         EventsGameManager.OnEnterKeyPressed -= ChangeColorToGreen;

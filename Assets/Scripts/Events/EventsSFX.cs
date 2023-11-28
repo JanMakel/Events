@@ -23,12 +23,14 @@ public class EventsSFX : MonoBehaviour
         particleSystem.Stop();
     }
 
+    //Subscripción de las funciones a los Eventos
     public void OnEnable()
     {
         EventsGameManager.OnEnterKeyPressed += StartParticleSystem;
         EventsGameManager.OnEscapeKeyPressed += StopParticleSystem;
     }
 
+    //DesSubscripción de las funciones a los Eventos
     public void OnDisable()
     {
         EventsGameManager.OnEnterKeyPressed -= StartParticleSystem;
